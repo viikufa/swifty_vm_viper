@@ -1,0 +1,10 @@
+import Foundation
+
+protocol {{ module_info.name }}RouterInput {
+    func dismiss(completion: (() -> Void)?)
+}
+extension {{ module_info.name }}RouterInput {
+    func dismiss() {
+        dismiss(completion: nil)
+    }
+}

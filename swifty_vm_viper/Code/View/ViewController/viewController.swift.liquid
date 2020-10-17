@@ -1,0 +1,24 @@
+import UIKit
+
+class {{ module_info.name }}ViewController: UIViewController {
+    var output: {{ module_info.name }}ViewOutput!
+    var viewModel: {{ module_info.name }}ViewModel!
+
+    // MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupLocalization()
+        output.viewDidLoad()
+    }
+}
+
+// MARK: - {{ module_info.name }}ViewInput
+extension {{ module_info.name }}ViewController: {{ module_info.name }}ViewInput {
+    func localize() {
+        title = "{{ module_info.name }}.Title.text".localized()
+    }
+}
+
+// MARK: - Private
+extension {{ module_info.name }}ViewController {
+}

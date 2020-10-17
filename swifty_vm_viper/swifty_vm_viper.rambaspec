@@ -1,0 +1,34 @@
+# Template information section
+name: swifty_vm_viper
+summary: swifty viper with viewModels
+author: viikufa
+version: 1.0.0
+license: MIT
+
+# The declarations for code files
+code_files:
+
+# Assembly
+- {name: Assembly/Configurator.swift, path: Code/Assembly/configurator.swift.liquid}
+- {name: Assembly/Initializer.swift, path: Code/Assembly/initializer.swift.liquid}
+
+# Presenter layer
+- {name: Presenter/ModuleInput.swift, path: Code/Presenter/moduleInput.swift.liquid}
+- {name: Presenter/ModuleOutput.swift, path: Code/Presenter/moduleOutput.swift.liquid}
+- {name: Presenter/Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
+
+# Router layer
+- {name: Router/RouterInput.swift, path: Code/Router/routerInput.swift.liquid}
+- {name: Router/Router.swift, path: Code/Router/router.swift.liquid}
+
+# View layer
+- {name: View/ViewInput.swift,  path: Code/View/viewInput.swift.liquid}
+- {name: View/ViewOutput.swift, path: Code/View/viewOutput.swift.liquid}
+- {name: View/ViewModel.swift, path: Code/View/viewModel.swift.liquid}
+- {name: View/ViewController/ViewController.swift, path: Code/View/ViewController/viewController.swift.liquid}
+
+# The declarations for test files
+test_files:
+
+# Template dependencies
+dependencies:

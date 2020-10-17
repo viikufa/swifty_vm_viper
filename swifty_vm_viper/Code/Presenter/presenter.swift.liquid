@@ -1,0 +1,32 @@
+import Foundation
+import Future
+
+class {{ module_info.name }}Presenter {
+    weak var view: {{ module_info.name }}ViewInput!
+    var output: {{ module_info.name }}ModuleOutput!
+    var router: {{ module_info.name }}RouterInput!
+
+    private var viewModel: {{ module_info.name }}ViewModel! {
+        didSet {
+            view.viewModel = viewModel
+        }
+    }
+}
+// MARK: - {{ module_info.name }}ViewOutput
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ViewOutput {
+    func viewDidLoad() {
+    }
+}
+// MARK: - {{ module_info.name }}ModuleInput
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ModuleInput {
+    func configure(output: {{ module_info.name }}ModuleOutput) {
+        self.output = output
+    }
+
+    func dismiss() {
+        router.dismiss(completion: nil)
+    }
+}
+// MARK: - Private
+extension {{ module_info.name }}Presenter {
+}
